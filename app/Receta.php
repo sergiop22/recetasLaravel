@@ -15,4 +15,9 @@ class Receta extends Model
     {
     	return $this->belongsTo(CategoriaReceta::class);
     }
+
+    public function autor()
+    {
+    	return $this->belongsTo(User::class, 'user_id');//user_id es el foreing key
+    }
 }

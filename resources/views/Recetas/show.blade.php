@@ -11,17 +11,17 @@
 
 		<div class="receta-meta mt-2">
 			<p>
-				<span class="font-weight bold text-primary">Escrito en:</span>
+				<span class="font-weight bold text-danger">Escrito en:</span>
 				{{$receta->categoria->nombre}}
 			</p>
 
 			<p>
-				<span class="font-weight bold text-primary">Autor:</span>
-				{{$receta->user_id}}
+				<span class="font-weight bold text-danger">Autor:</span>
+				{{$receta->autor->name}}
 			</p>
 
 			<p>
-				<span class="font-weight bold text-primary">Fecha:</span>
+				<span class="font-weight bold text-danger">Fecha:</span>
 				@php
 					$fecha = $receta->created_at
 				@endphp
@@ -30,13 +30,13 @@
 			</p>
 
 			<div class="ingredientes">
-				<h2 class="my-3 text-primary">Ingredientes</h2>
+				<h2 class="my-3 text-danger">Ingredientes</h2>
 
 				{!! $receta->ingredientes !!}
 			</div>
 
 			<div class="preparacion">
-				<h2 class="my-3 text-primary">Preparacion</h2>
+				<h2 class="my-3 text-danger">Preparacion</h2>
 
 				{!! $receta->preparacion !!}
 			</div>
