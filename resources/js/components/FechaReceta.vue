@@ -1,5 +1,5 @@
 <template>
-	<span>v-text="formatearFecha" </span>
+	<span>{{formatearFecha}}</span>
 </template>
 
 <script>
