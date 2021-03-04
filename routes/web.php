@@ -28,3 +28,6 @@ Route::get('/recetas', 'RecetaController@index')->name('recetas.index');
 Route::get('/recetas/create', 'RecetaController@create')->name('recetas.create');
 Route::post('/recetas', 'RecetaController@store')->name('recetas.store');
 Route::get('/recetas/{receta}', 'RecetaController@show')->name('recetas.show');
+Route::get('/recetas/{receta}/edit', 'RecetaController@edit')->name('recetas.edit');
+Route::put('/recetas/{receta}', 'RecetaController@update')->name('recetas.update');
+
