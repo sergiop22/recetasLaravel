@@ -140,8 +140,13 @@ class RecetaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Receta $receta)
     {
-        //
+        //ejecutar policy
+        $this->authorize('delete', $receta);
+
+        $receta->delete();
+
+        return redirect()->action('RecetaController@index');
     }
 }
