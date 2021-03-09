@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Perfil;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class PerfilController extends Controller
 {
@@ -45,18 +46,26 @@ class PerfilController extends Controller
         ]);
 
         //si el usuario sube una imagen
+        if($request['imagen']) {
+            $ruta_imagen = $request['imagen']->store('upload-perfiles', 'public');
+
+            $img = Image::make( public_path("storage/{$ruta_imagen}"))->fit(600, 600);
+            $img->save();
+
+            $array_imagen = ['imagen' => $ruta_imagen];
+        }
 
         //guardar informacion
-    }
+        auth()->user()->name = $data['name'];
+        auth()->user()->save();
+        //eliminar name del data
+        unset($data['name']);
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Perfil  $perfil
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Perfil $perfil)
-    {
-        //
+        auth()->user()-perfil()->update( array_merge(
+            $data, 
+            $array_imagen ?? []
+        ));
+
+         return redirect()->action('RecetasController@index');
     }
 }

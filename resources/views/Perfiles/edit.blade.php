@@ -6,7 +6,7 @@
 
 @section('botones')
 
-    <a href="{{ Route('recetas.index')}}" class="btn btn-danger mr-2 text-white">Volver</a>
+    <a href="{{ Route('recetas.index')}}" class="btn btn-outline-danger mr-2 text-uppercase font-weight-bold">Volver</a>
 
 @endsection
 
@@ -70,7 +70,7 @@
 	            @if($perfil->imagen)
 		            <div class="mt-4">
 		                <p>Imagen actual:</p>
-		                {{--<img src="/storage/{{$receta->imagen}}" style="width: 300px">--}}
+		                <img src="/storage/{{$perfil->imagen}}" style="width: 300px">
 		            </div>
 
 		            @error('imagen')

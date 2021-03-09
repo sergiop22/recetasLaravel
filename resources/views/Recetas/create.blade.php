@@ -6,7 +6,7 @@
 
 @section('botones')
 
-    <a href="{{ Route('recetas.index')}}" class="btn btn-danger mr-2 text-white">Volver</a>
+    <a href="{{ Route('recetas.index')}}" class="btn btn-outline-danger mr-2 text-uppercase font-weight-bold">Volver</a>
 
 @endsection
 
