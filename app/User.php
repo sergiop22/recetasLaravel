@@ -28,6 +28,17 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    //Evento que se ejecuta cuando un usuario es creado
+    protected static function boot(){
+
+        parent::boot();
+
+        //Asignar perfil una vez se haya creado un usuario nuevo
+        static::created(function($user){
+            $user->perfil()->create();
+        });
+    }
+
     /**
      * The attributes that should be cast to native types.
      *
@@ -42,5 +53,11 @@ class User extends Authenticatable
     {
 
         return $this->hasMany(Receta::class);
+    }
+
+    public function perfil()
+    {
+
+        return $this->hasOne(Perfil::class);
     }
 }
