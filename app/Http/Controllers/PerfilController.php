@@ -79,6 +79,6 @@ class PerfilController extends Controller
             $array_imagen ?? []
         ));
 
-         return redirect()->action('RecetasController@index');
+        return redirect()->action('RecetasController@index');
     }
 }

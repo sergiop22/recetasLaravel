@@ -41,6 +41,12 @@
 				{!! $receta->preparacion !!}
 			</div>
 
+			<like-button
+				receta-id="{{$receta->id}}"
+			></like-button>
+
+
+
 		</div>
 		
 	</article>

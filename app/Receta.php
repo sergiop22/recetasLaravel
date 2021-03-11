@@ -20,4 +20,10 @@ class Receta extends Model
     {
     	return $this->belongsTo(User::class, 'user_id');//user_id es el foreing key
     }
+
+    //likes que ha recibido una receta
+    public function likes()
+    {
+        return $this->belongsToMany(User::class, 'likes_receta');
+    }
 }
