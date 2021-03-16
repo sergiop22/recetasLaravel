@@ -1,5 +1,5 @@
 body {
-    font-family: $parrafos-font-family;
+    //font-family: $parrafos-font-family;
     background-color: #f4f0f0;
 }
 trix-editor {
@@ -7,7 +7,7 @@ trix-editor {
 }
 .bg-primary .navbar-brand {
     color: white;
-    font-family: $font-family-sans-serif;
+    //font-family: $font-family-sans-serif;
     font-size: 2rem;
     font-family: 'Fredoka One', cursive;
     color: #FFF!important;
@@ -109,8 +109,7 @@ trix-editor {
 }
 
 .hero-categorias {
-    background-image: linear-gradient(to bottom, rgba(70, 70, 70, 0.4), rgba(53, 53, 53, 0.571)),
-url('../images/bgimagen.jpg');
+    background-image: linear-gradient(to bottom, rgba(70, 70, 70, 0.4), rgba(53, 53, 53, 0.571)); //url('../images/bgimagen.jpg');
     height:30rem;
     background-size: cover;
     background-position: top center;

@@ -14,7 +14,7 @@
 				isActive: this.like,
 				totalLikes: this.likes
 			}
-		}
+		},
 		methods: {
 			likeReceta() {
 				axios.post('/recetas/' + this.recetaId)
