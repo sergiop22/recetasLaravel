@@ -31,6 +31,8 @@ Route::delete('/recetas/{receta}', 'RecetaController@destroy')->name('recetas.de
 
 Route::resource('recetas', 'RecetaController');
 
+Route::get('/categoria/{categoriaReceta}', 'CategoriasController@show')->name('categorias.show');
+
 Route::get('/perfiles/{perfil}', 'PerfilController@show')->name('perfiles.show');
 Route::get('/perfiles/{perfil}/edit', 'PerfilController@edit')->name('perfiles.edit');
 Route::put('/perfiles/{perfil}', 'PerfilController@update')->name('perfiles.update');
