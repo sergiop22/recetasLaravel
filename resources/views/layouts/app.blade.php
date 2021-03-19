@@ -91,15 +91,15 @@
                     <ul class="navbar-nav w-100 d-flex justify-content-between">
                         @foreach ($categorias as $categoria)
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('categorias.show', ['categoriaReceta' => $categoria->id]) }}">
-                            {‌{ $categoria->nombre }}
-                            </a>
+                            <a class="nav-link" href="{{ route('categorias.show', ['categoriaReceta' => $categoria->id]) }}">{{$categoria->nombre}}</a>
                         </li>
                         @endforeach
                     </ul>
                 </div>
             </div>
         </nav>
+
+        @yield('hero')
 
 
         <div class="container">

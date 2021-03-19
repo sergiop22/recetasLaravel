@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<span class="like-btn" @click="likeReceta" :class"{ 'like-active' : isActive }"></span>
+		<span class="like-btn" @click="likeReceta" :class="{ 'like-active' : this.like }"></span>
 
 		<p>A {{ cantidadLikes }} les gusto esta receta</p>
 	</div>

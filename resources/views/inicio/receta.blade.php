@@ -18,7 +18,7 @@
 				{{ Str::words( strip_tags($receta->preparacion), 20, '...') }} 
 			</p>
 
-			<a href="{{ route('receta.show', ['receta' => $receta->id ]) }}" class="btn btn-danger d-block btn-receta">Ver receta</a>
+			<a href="{{ route('recetas.show', ['receta' => $receta->id ]) }}" class="btn btn-danger d-block btn-receta">Ver receta</a>
 		</div>
 	</div>
 </div>

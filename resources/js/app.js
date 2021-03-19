@@ -40,14 +40,13 @@ const app = new Vue({
     el: '#app',
 });
 
-// jQuery para Like
+/* jQuery para Like
 
 $('.like-btn').on('click', function() {
    $(this).toggleClass('like-active');
-});
+}); */
 
 //carousel con owl
-
 jQuery(document).ready(function(){
 	jQuery('.owl-carousel').owlCarousel({
 		margin: 10,
